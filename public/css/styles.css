@@ -1,0 +1,319 @@
+/* Remove padding and margin */ 
+*  
+    { 
+    margin: 0; 
+    padding: 0; 
+    border: 0; 
+}
+
+@font-face {
+    font-family: "general";
+    src: url("../../fonts/CircularStd-Medium.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "title";
+    src: url("../../fonts/CircularStd-Bold.otf") format("truetype");
+}
+
+html {
+    background-color: rgb(207,216,220);
+    font-family: "title", sans-serif;
+}
+
+.cb-slideshow:after { 
+    content: '';
+/*    background: transparent url(../images/pattern.png) repeat top left; */
+}
+
+section {
+    display: block;
+    margin:2em 0;
+}
+
+.clear { 
+    clear:both; 
+} 
+
+.right a{ 
+    float: right; 
+} 
+
+.left { 
+    float: left; 
+}
+
+.aligned {
+    text-align: center;
+}
+
+.leftalign {
+    text-align: left;
+}
+
+.inlined {
+    display: inline-block;
+}
+
+.blocked {
+    display:block;
+}
+
+.inherits {
+    width:inherit;
+    padding:inherit;
+}
+
+ul {
+    display: inline;
+    list-style: none;   
+}
+
+.mega {
+    font-size:5.5em;
+}
+
+h1 { 
+    font-size: 2.5em; 
+} 
+
+h2 { 
+    font-size: 2.0em;     
+} 
+
+h3 { 
+    font-size: 1.8em; 
+} 
+
+h4 { 
+    font-size: 1.6em;     
+} 
+
+h5 { 
+    font-size: 1.4em;     
+}
+
+h6 {
+    font-size:1.1em;
+}
+
+p { 
+    font-size: .9em;     
+}
+
+.slide_text {
+
+}
+
+.centerlogo {
+    width:5%;
+    margin: auto;
+    position:absolute;
+    top:-50em;
+}
+
+#header {
+/*    max-height: 50px;*/
+    overflow: hidden;
+    margin: auto;
+}
+
+#header img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+/*    max-height: $window;*/
+    position:relative;
+    background-size: cover;
+    background-position: center bottom;
+    opacity: 1;
+}
+
+#header h1 {
+    position: relative;
+    text-align: center;
+    margin-top: -5.5em;
+}
+
+#header h2 {
+    top: 4em;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+
+
+.nav {
+    text-align: center;
+    margin-top:-3em;
+}
+
+.tabs li {
+    padding: 0 .5em;
+    margin: 0 .3em;
+}
+
+.redtab {
+    color:white;
+    background-color: rgb(237,84,85);
+}
+
+.bluetab {
+    color:white;
+    background-color: rgb(89,161,213); 
+}
+
+#header div {
+    position: inherit;
+    text-align: center;
+}
+
+#portfolio {
+    width:100%;
+    position: relative;
+}
+
+.portfolio_image {
+    padding:2.9em 0 ;
+    
+}
+
+.descriptions {
+/*    display: inline;*/
+    font-family: 'general', sans-serif;
+}
+
+.tab {
+    color:white;
+}
+
+#yellowtab {
+    background-color: rgb(250,178,49);
+    text-decoration: none;
+    padding: .1em 4.5em .1em .1em;
+}
+
+#howitworks {
+    width:100%;
+    margin-top:40rem;
+}
+
+.process {
+    width:100%
+}
+
+.statement {
+    margin-bottom: 1em; 
+}
+
+.process_num {
+    padding-top:.1em;
+    width:1em;
+}
+
+.process_text {
+    padding: 1em;
+}
+
+.team {
+    width:100%;
+}
+
+.row {
+    text-align: center;
+}
+
+
+
+.height {
+    vertical-align: middle;
+}
+
+.member {
+    margin: .2em;
+}
+
+.member2 {
+    margin: .2em .2em .2em .52em;
+    
+}
+
+.special-row {
+    vertical-align: middle;
+    height: 10em;
+    display: inline;
+}
+
+.team_text {
+/*    padding: 1em 0 1em 1em;*/
+/*    margin-left:1.2em*/
+/*    position:relative;*/
+/*    margin: 1em .7em 0 .3em;*/
+    padding-top: .5em;
+    font-size:1.8em;
+}
+
+
+
+.purple {
+    color: rgb(154,84,158);
+}
+
+.orange {
+    color: rgb(245,163,58);
+}
+
+.teal {
+    color: rgb(49,165,153);
+}
+
+.blue {
+    color: rgb(89,161,213);
+}
+
+.red {
+    color: rgb(237,84,85);
+}
+
+.green {
+    color: rgb(81,181,87);
+}
+/*********************
+***    Gridding   ****
+*********************/
+
+.col-1 {width: 6.25%;}
+.col-2 {width: 12.5%;}
+.col-2-5 {width:15.6%}
+.col-3 {width: 18.75%;}
+.col-4 {width: 25%;}
+.col-5 {width: 31.25%;}
+.col-6 {width: 37.5%;}
+.col-7 {width: 43.75%;}
+.col-8 {width: 50%;}
+.col-9 {width: 56.25%;}
+.col-10 {width: 62.5%;}
+.col-11 {width: 68.75%;}
+.col-12 {width: 75%;}
+.col-13 {width: 81.25%;}
+.col-14 {width: 87.5%;}
+.col-15 {width: 93.75%;}
+.col-16 {width: 100%;}
+.col-offset-16 {margin-left: 100%;}
+.col-offset-15 {margin-left: 93.75%;}
+.col-offset-14 {margin-left: 87.5%;}
+.col-offset-13 {margin-left: 81.25%;}
+.col-offset-12 {margin-left: 75%;}
+.col-offset-11 {margin-left: 68.75%;}
+.col-offset-10 {margin-left: 62.5;}
+.col-offset-9 {margin-left: 56.25%;}
+.col-offset-8 {margin-left: 50%;}
+.col-offset-7 {margin-left: 43.75%;}
+.col-offset-6 {margin-left: 37.5%;}
+.col-offset-5 {margin-left: 31.25%;}
+.col-offset-4 {margin-left: 25%;}
+.col-offset-3 {margin-left: 18.75%;}
+.col-offset-2 {margin-left: 12.5%;}
+.col-offset-1 {margin-left: 6.25%;}
+.col-offset-0 {margin-left: 0%;}
