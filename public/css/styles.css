@@ -35,6 +35,10 @@ section {
     clear:both; 
 } 
 
+.clear-left {
+    clear:left;
+}
+
 .right a{ 
     float: right; 
 } 
@@ -57,6 +61,10 @@ section {
 
 .blocked {
     display:block;
+}
+
+.centered {
+    margin: 0 auto;
 }
 
 .inherits {
@@ -220,15 +228,12 @@ p {
     width:100%;
 }
 
+/*
 .row {
     text-align: center;
 }
+*/
 
-
-
-.height {
-    vertical-align: middle;
-}
 
 .member {
     margin: .2em;
@@ -239,22 +244,33 @@ p {
     
 }
 
+/*
 .special-row {
-    vertical-align: middle;
-    height: 10em;
-    display: inline;
 }
+*/
 
+
+
+/* MEANT FOR THREE IMAGE PLUS TEXT ROW*/
 .team_text {
-/*    padding: 1em 0 1em 1em;*/
-/*    margin-left:1.2em*/
-/*    position:relative;*/
-/*    margin: 1em .7em 0 .3em;*/
-    padding-top: .5em;
+    padding: .5em;
     font-size:1.8em;
 }
 
 
+/* MEANT FOR TWO IMAGE PLUS TEXT ROW*/
+/*
+.team_text2 {
+
+    padding: 1em;
+    font-size: 1.8em;
+}
+*/
+
+
+/*********************
+***  Site Colors  ***
+*********************/
 
 .purple {
     color: rgb(154,84,158);
@@ -279,6 +295,9 @@ p {
 .green {
     color: rgb(81,181,87);
 }
+
+
+
 /*********************
 ***    Gridding   ****
 *********************/
@@ -300,6 +319,8 @@ p {
 .col-14 {width: 87.5%;}
 .col-15 {width: 93.75%;}
 .col-16 {width: 100%;}
+
+/* offest */
 .col-offset-16 {margin-left: 100%;}
 .col-offset-15 {margin-left: 93.75%;}
 .col-offset-14 {margin-left: 87.5%;}
@@ -317,3 +338,101 @@ p {
 .col-offset-2 {margin-left: 12.5%;}
 .col-offset-1 {margin-left: 6.25%;}
 .col-offset-0 {margin-left: 0%;}
+
+/*********************
+*** Team Gridding ****
+*********************/
+.team-col-0 {width:0%;}
+.team-col-1 {width: 14.28%;}
+.team-col-2 {width: 28.57%;}
+.team-col-3 {width:42.86%;}
+.team-col-4 {width: 57.14%;}
+.team-col-5 {width: 71.43%;}
+.team-col-6 {width: 85.71%;}
+.team-col-7 {width: 100%;}
+
+.team-col-offset-7 {margin-left: 100%;}
+.team-col-offset-6 {margin-left: 85.71%;}
+.team-col-offset-5 {margin-left: 71.43%;}
+.team-col-offset-4 {margin-left: 57.14%;}
+.team-col-offset-3 {margin-left: 42.86%;}
+.team-col-offset-2 {margin-left: 28.57%;}
+.team-col-offset-1 {margin-left: 14.28%;}
+.team-col-offset-0 {margin-left: 0%;}
+
+/*********************
+***   Responsive   ***
+*********************/
+
+@media screen and (max-width:980px) {
+    /*********************
+    ***  Team Section  ***
+    *********************/
+    
+    .team_text {
+        font-size: 1.5em;
+    }
+    
+}
+
+@media screen and (max-width:830px) {
+    /*********************
+    ***  Team Section  ***
+    *********************/
+    .team_text {
+        font-size: 1.3em;
+    }
+    
+}
+
+@media screen and (max-width:720px) {
+    /*********************
+    ***  Team Section  ***
+    *********************/
+    .team_text {
+        font-size: 1.1em;
+    }
+    
+}
+
+@media screen and (max-width:600px) {
+    /*********************
+    ***  Team Section  ***
+    *********************/
+    .team_text {
+        font-size: .9em;
+    }
+    
+}
+
+@media screen and (max-width:500px) {
+    /*********************
+    ***  Team Section  ***
+    *********************/
+    .team_text {
+        font-size: .7em;
+    }
+    
+}
+
+
+@media screen and (max-width:450px) {
+    /*********************
+    ***  Team Section  ***
+    *********************/
+    .clear-left {
+        clear:none;
+    }
+    .team_text {
+        font-size: .7em;
+                width:0%;
+    }
+    .mobile-hide {
+        display:none;
+/*        override column width of text     */
+        width:0%;
+    }
+    .team-col-1 {
+        width:33%;
+    }
+}
