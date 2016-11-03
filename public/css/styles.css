@@ -17,7 +17,8 @@
 }
 
 html {
-    background-color: rgb(207,216,220);
+    background-color: rgb(238,241,244);
+/*    background-color: rgb(207,216,220);*/
     font-family: "title", sans-serif;
 }
 
@@ -28,7 +29,7 @@ html {
 
 section {
     display: block;
-    margin:2em 0;
+/*    margin:2em 0;*/
 }
 
 .clear { 
@@ -79,6 +80,10 @@ ul {
 
 .mega {
     font-size:5.5em;
+}
+
+.large {
+    font-size: 3em;
 }
 
 h1 { 
@@ -156,14 +161,10 @@ p {
     margin: 0 .3em;
 }
 
-.redtab {
+#redtab {
     color:white;
     background-color: rgb(237,84,85);
-}
-
-.bluetab {
-    color:white;
-    background-color: rgb(89,161,213); 
+/*    margin-top: -1.4em;*/
 }
 
 #header div {
@@ -171,19 +172,21 @@ p {
     text-align: center;
 }
 
-#portfolio {
+#hello {
     width:100%;
-    position: relative;
+    background-color: rgb(238,241,244);
 }
 
-.portfolio_image {
-    padding:2.9em 0 ;
-    
+.hello_content {
+    margin: 0 auto;
+    padding: 3em;
 }
 
-.descriptions {
-/*    display: inline;*/
-    font-family: 'general', sans-serif;
+p.description {
+    margin: 0 auto;
+    padding: 1em;
+    font-size: 1.5em;
+    font-family: 'general', 'sans-serif';
 }
 
 .tab {
@@ -194,12 +197,13 @@ p {
     background-color: rgb(250,178,49);
     text-decoration: none;
     padding: .1em 4.5em .1em .1em;
+    margin-bottom: -1.4rem;
 }
 
 #howitworks {
     width:100%;
     clear:both;
-    padding: 0em 0;
+    padding: 0em 0 2em 0;
     background-color: rgb(207,216,220);
 
 }
@@ -211,23 +215,27 @@ p {
 .process_num {
     padding-top:.1em;
     width:1em;
+        font-family: 'general', 'sans-serif';
+
 }
 
 .process_text {
     padding: 1em 0em 1em 1em;
+    font-family: 'general', 'sans-serif';
 }
 
 .statement {
     padding: 1em 0 ;
 }
 
-.team {
+#team {
     width:100%;
 }
 
 .team_text {
     padding: .5em;
     font-size:1.8em;
+    font-family: 'title', 'sans-serif';
 }
 
 /*********************
