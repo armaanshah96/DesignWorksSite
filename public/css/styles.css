@@ -1,6 +1,5 @@
 /* Remove padding and margin */ 
-*  
-    { 
+* { 
     margin: 0; 
     padding: 0; 
     border: 0; 
@@ -22,16 +21,6 @@ html {
     font-family: "title", sans-serif;
 }
 
-.cb-slideshow:after { 
-    content: '';
-/*    background: transparent url(../images/pattern.png) repeat top left; */
-}
-
-section {
-    display: block;
-/*    margin:2em 0;*/
-}
-
 .clear { 
     clear:both; 
 } 
@@ -43,6 +32,11 @@ section {
 .right a{ 
     float: right; 
 } 
+
+.right {
+    float:right;
+}
+
 
 .left { 
     float: left; 
@@ -78,8 +72,12 @@ ul {
     list-style: none;   
 }
 
+.giga {
+    font-size: 5.5em;
+}
+
 .mega {
-    font-size:5.5em;
+    font-size:4em;
 }
 
 .large {
@@ -114,68 +112,246 @@ p {
     font-size: .9em;     
 }
 
-.centerlogo {
-    width:5%;
-    margin: auto;
-    position:absolute;
-    top:-50em;
-}
 
-#header {
-/*    max-height: 50px;*/
-    overflow: hidden;
-    margin: auto;
-}
 
-#header img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-/*    max-height: $window;*/
-    position:relative;
-    background-size: cover;
-    background-position: center bottom;
-    opacity: 1;
-}
-
-#header h1 {
-    position: relative;
-    text-align: center;
-    margin-top: -5.5em;
-}
-
-#header h2 {
-    top: 4em;
-    position: absolute;
-    text-align: center;
-    width: 100%;
-}
+/**********************
+***  Navbar Styles ***
+***********************/
 
 .nav {
     text-align: center;
-    margin-top:-3.5em;
+    background: white; 
+    padding: .2em 0;    
+    position:fixed;
+    z-index: 1000;
 }
 
-.tabs li {
-    padding: 0 .5em;
-    margin: 0 .3em;
+.nav li {
+    padding: 0 1rem;
+    font-size: 1.3em;
+    font-family: 'general','sans-serif';
+}
+
+.mininav {
+    text-align: center;
+    margin-top:-1.4rem;
+}
+
+.homelogo {
+    vertical-align: middle;
+    width:70%
+}
+
+/**********************************************************
+***     Tab Styles (i.e. full portfolio, contact us)    ***
+***********************************************************/
+
+.tab {
+    color:white;
 }
 
 #redtab {
     color:white;
     background-color: rgb(237,84,85);
-/*    margin-top: -1.4em;*/
-}
-
-#header div {
-    position: inherit;
     text-align: center;
 }
+
+#yellowtab {
+    background-color: rgb(250,178,49);
+    text-decoration: none;
+    padding: .1em 4.5em .1em .1em;
+    margin-bottom: -1.4rem;
+}
+
+/****************************
+***  Slideshow Section ***
+****************************/
+
+.slideshow,
+.slideshow:after { 
+/*    position: fixed;*/
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0; 
+}
+.cover { 
+    width: 100%;
+    height: 100%;
+/*    position: relative;*/
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 75% 50%;
+    background-repeat: none;
+/*    opacity: 0;*/
+    z-index: 0;
+/*    vertical-align: text-top;*/
+}
+
+.main_text { 
+    z-index: 1;
+    position: absolute;
+    top: 7em;
+}
+
+.main_text h2 {
+    font-size: 2.5em;
+}
+
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:white;
+}
+
+.arrows {
+    top:45%;
+    
+}
+
+.slide-arrows {
+/*    position:absolute;*/
+    top:45%;
+    z-index: 10000;
+    color:rgb(192, 213, 234);
+/*    width:2%;*/
+/*    height:1.5em;*/
+/*    background-color: aqua;*/
+    font-size:3em;
+}
+
+
+.slideLeft{
+	animation-name: slideLeft;
+	-webkit-animation-name: slideLeft;	
+
+	animation-duration: .8s;	
+	-webkit-animation-duration: .8s;
+
+	animation-timing-function: ease-in-out;	
+	-webkit-animation-timing-function: ease-in-out;		
+
+	visibility: visible !important;	
+}
+
+@keyframes slideLeft {
+	0% {
+		transform: translateX(150%);
+	}
+/*
+	50%{
+		transform: translateX(-8%);
+	}
+	65%{
+		transform: translateX(4%);
+	}
+	80%{
+		transform: translateX(-4%);
+	}
+	95%{
+		transform: translateX(2%);
+	}			
+	100% {
+		transform: translateX(0%);
+	}
+*/
+}
+
+@-webkit-keyframes slideLeft {
+	0% {
+		-webkit-transform: translateX(150%);
+	}
+	50%{
+		-webkit-transform: translateX(-8%);
+	}
+	65%{
+		-webkit-transform: translateX(4%);
+	}
+	80%{
+		-webkit-transform: translateX(-4%);
+	}
+	95%{
+		-webkit-transform: translateX(2%);
+	}			
+	100% {
+		-webkit-transform: translateX(0%);
+	}
+}
+
+.slideRight{
+	animation-name: slideRight;
+	-webkit-animation-name: slideRight;	
+
+	animation-duration: .01s;	
+	-webkit-animation-duration: .01s;
+
+	animation-timing-function: ease-in-out;	
+	-webkit-animation-timing-function: ease-in-out;		
+
+	visibility: visible !important;	
+}
+
+@keyframes slideRight {
+	0% {
+		transform: translateX(-150%);
+	}
+/*
+	50%{
+		transform: translateX(8%);
+	}
+	65%{
+		transform: translateX(-4%);
+	}
+	80%{
+		transform: translateX(4%);
+	}
+	95%{
+		transform: translateX(-2%);
+	}			
+	100% {
+		transform: translateX(0%);
+	}	
+*/
+}
+
+@-webkit-keyframes slideRight {
+	0% {
+		-webkit-transform: translateX(-150%);
+	}
+	50%{
+		-webkit-transform: translateX(8%);
+	}
+	65%{
+		-webkit-transform: translateX(-4%);
+	}
+	80%{
+		-webkit-transform: translateX(4%);
+	}
+	95%{
+		-webkit-transform: translateX(-2%);
+	}			
+	100% {
+		-webkit-transform: translateX(0%);
+	}
+}
+
+
+/****************************
+***  We Are DW Section ***
+****************************/
+
 
 #hello {
     width:100%;
     background-color: rgb(238,241,244);
 }
+
+
 
 .hello_content {
     margin: 0 auto;
@@ -189,40 +365,35 @@ p.description {
     font-family: 'general', 'sans-serif';
 }
 
-.tab {
-    color:white;
-}
-
-#yellowtab {
-    background-color: rgb(250,178,49);
-    text-decoration: none;
-    padding: .1em 4.5em .1em .1em;
-    margin-bottom: -1.4rem;
-}
+/****************************
+***  How it Works Section ***
+****************************/
 
 #howitworks {
     width:100%;
     clear:both;
     padding: 0em 0 2em 0;
     background-color: rgb(207,216,220);
-
 }
 
 .process {
-    width:100%
+    width:100%;
 }
 
 .process_num {
-    padding-top:.1em;
+/*    padding-top:.1em;*/
     width:1em;
-        font-family: 'general', 'sans-serif';
-
+    font-family: 'general', 'sans-serif';
 }
 
 .process_text {
     padding: 1em 0em 1em 1em;
     font-family: 'general', 'sans-serif';
 }
+
+/*********************
+***  Team Section  ***
+*********************/
 
 .statement {
     padding: 1em 0 ;
@@ -237,6 +408,8 @@ p.description {
     font-size:1.8em;
     font-family: 'title', 'sans-serif';
 }
+
+
 
 /*********************
 ***  Site Colors  ***
@@ -266,15 +439,12 @@ p.description {
     color: rgb(81,181,87);
 }
 
-
-
 /*********************
 ***    Gridding   ****
 *********************/
 
 .col-1 {width: 6.25%;}
 .col-2 {width: 12.5%;}
-.col-2-5 {width:15.6%}
 .col-3 {width: 18.75%;}
 .col-4 {width: 25%;}
 .col-5 {width: 31.25%;}
@@ -334,6 +504,18 @@ p.description {
 ***   Responsive   ***
 *********************/
 
+@media screen and (max-width:1250) {
+    /*********************
+    ***  Team Section  ***
+    *********************/
+    
+    .main_text {
+        font-size:2em;
+        top:6em;
+    }
+    
+}
+
 @media screen and (max-width:980px) {
     /*********************
     ***  Team Section  ***
@@ -346,6 +528,13 @@ p.description {
 }
 
 @media screen and (max-width:830px) {
+    /***************************
+    ***  Slideshow Section  ***
+    ***************************/
+    .main_text h2 {
+        font-size: 1.5em;
+    }
+    
     /*********************
     ***  Team Section  ***
     *********************/
@@ -356,6 +545,20 @@ p.description {
 }
 
 @media screen and (max-width:720px) {
+    /***************************
+    ***  Slideshow Section  ***
+    ***************************/
+    .main_text h2 {
+        font-size: 1em;
+    }
+    
+    /***************************
+    ***  Slideshow Section  ***
+    ***************************/
+    .main_text h2 {
+        font-size: 1em;
+    }
+    
     /*********************
     ***  Team Section  ***
     *********************/
@@ -368,6 +571,38 @@ p.description {
 }   
 
 @media screen and (max-width:600px) {
+    /***************************
+    ***  Slideshow Section  ***
+    ***************************/
+    .main_text h2 {
+        font-size: 1em;
+    }
+
+    .slideshow, 
+    .slideshow:after { 
+/*    position: fixed;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+    top: 0px;
+    left: 0px;
+    z-index: 0; 
+    }   
+    
+    .cover { 
+        width: 100%;
+        height: 100%;
+    /*    position: relative;*/
+        top: 0px;
+        left: 0px;
+        color: transparent;
+        background-size: cover;
+        background-position: 75% 50%;
+        background-repeat: none;
+    /*    opacity: 0;*/
+        z-index: 0;
+    /*    vertical-align: text-top;*/
+    }
+
     /*********************
     ***  Team Section  ***
     *********************/
@@ -429,3 +664,13 @@ p.description {
         margin:0;
     }
 }
+
+
+@media screen and (max-width:830px) {
+    .main_text {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width:720px) {}
+
