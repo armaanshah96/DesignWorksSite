@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Designworks</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">-->
+
+    <link rel="stylesheet" href="public/css/styles.css">
+    <!--    <script src="public/contact-form.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!--    Nav bar     -->
+    <ul class="centered col-16 nav">
+        <li class="inlined"><a href=#>Work</a></li>
+        <li class="inlined"><a href=index.html><img class=homelogo src=public/img/logo.png></a></li>
+        <li class="inlined"><a href=#>Contact</a></li>
+    </ul>
+    <section class="col-offset-1 col-14">
+        <h1 class="contact-title mega teal leftalign">Drop a line.</h1>
+        <h2 class="contact-text">Tell us what you're looking for and we'll be in touch.</h2>
+
+        <!--    form        -->
+        <div class="col-16">
+          <form action="ThankYou.html">
+            <div id=name>
+                <h4 class="col-3 medium-col-5 inlined form_text">Name</h4>
+                <input class=" col-6 mobile-col-10" type="text" id="nameinput" name="name">
+            </div>
+            
+            <div id=email>
+<!--                <div class="inlined"><label class="form_text" for="fname">Email</label></div>-->
+                <h4 class="col-3 medium-col-5 inlined form_text">Email</h4>
+                <input class=" col-6 mobile-col-10" type="text" id="emailinput" name="email">
+            </div>
+              
+            <div id=product>
+                <h4 class="col-3 medium-col-5 inlined form_text">Product</h4>
+
+                <select class=" col-4 medium-col-8 mobile-col-10" id="productinput" name="product">
+                  <option value="flyer">Flyer/Poster</option>
+                  <option value="website">Website</option>
+                  <option value="apparel">Apparel</option>
+                  <option value="logo">Logo/Branding</option>
+                  <option value="social">Social Media</option>
+                  <option value="social">Other</option>
+
+                </select>
+            </div>
+            <div id=notes>
+                <h4 class="col-3 medium-col-5 inlined form_text">Note</h4>
+                <textarea class=" col-6 note-input mobile-col-10" id=noteinput name="note" rows="5"></textarea>
+            </div>
+            <div class="col-16">
+            <h4 class="col-3 hide medium-col-5 inlined form_text"></h4>
+                <input class="col-3 mobile-col-10" type="submit" value="Submit" onclick="postToSheet();createMessage();">
+            </div>
+          </form>
+        </div>
+    </section> 
+    <footer>
+        <div class="footer-text aligned col-16">
+            <h4 class="">That's all, folks!</h4>
+            <h5><a class="" href="mailto:hello@designworks.nu"><span>hello</span>@<span class="redhover">D</span><span class=orangehover>e</span><span class=tealhover>s</span><span class=bluehover>i</span><span class="purplehover">g</span><span class="redhover">n</span><span class=orangehover>W</span><span class=tealhover>o</span><span class=bluehover>r</span><span class="purplehover">k</span><span class="redhover">s</span>.nu</a></h5>
+        </div> 
+    </footer>
+
+</body>
+<script>
+    function postToSheet() {
+        var name = $('#nameinput').val();
+        var email = $('#emailinput').val();
+        var product = $('#productinput').val();
+        var note = $('#noteinput').val();
+
+        $.ajax({
+            url: "https://docs.google.com/forms/d/e/1FAIpQLSd_TsHtYh1_nxB8OvJ1wdlHcPRTDSB7eaDCbp2Nyb7QlixM6w/formResponse",
+            data: {
+                "entry.201888400": name, 
+                "entry.1079343513": email, 
+                "entry.336242949": product,
+                "entry.975924983": note 
+            },
+            type: "POST",
+            dataType: "xml",
+            statusCode: {
+                0: function () {
+                    window.location.replace("ThankYou.html");
+                },
+                200: function () {
+                    window.location.replace("ThankYou.html");
+                }
+            }
+        });
+    }
+    
+    function createMessage() {
+        Logger.log("Creating message");
+        var url = "https://docs.google.com/spreadsheets/d/1VV4VCyZdDud9ozEtZGO6piwAcRdJcvqyhzC-ZP5QYV8/edit#gid=614233283";
+
+        var name = $('#nameinput').val();
+        var email = $('#emailinput').val();
+        var product = $('#productinput').val();
+        var note = $('#noteinput').val();
+
+        if(product==="Inquiry") {
+            var message = Name + " has a inquiry. <https://docs.google.com/spreadsheets/d/1VV4VCyZdDud9ozEtZGO6piwAcRdJcvqyhzC-ZP5QYV8/edit#gid=614233283|Check it Out>";
+        }
+        else if (product==="Other") {
+            var message = "Specs filled out by " + name + " for " + product + ". <https://docs.google.com/spreadsheets/d/1VV4VCyZdDud9ozEtZGO6piwAcRdJcvqyhzC-ZP5QYV8/edit#gid=614233283|Check it Out>";
+        }
+        else {
+           var message = "Specs filled out by " + name + " for a " + product + ". <https://docs.google.com/spreadsheets/d/1VV4VCyZdDud9ozEtZGO6piwAcRdJcvqyhzC-ZP5QYV8/edit#gid=614233283|Check it Out>";
+        }
+
+        var payload = 
+          {
+            "username": "DwContactBot",
+            "icon_emoji": ":o",
+            "text" : message
+          };
+        messageSlack(payload);
+    }
+
+    function messageSlack(data) {
+        var url = "https://hooks.slack.com/services/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";
+
+        var payload = JSON.stringify(data);
+//
+//        var options =
+//          {
+//            "method"  : "POST",
+//            "contentType" : "application/json",
+//            "payload" : payload,
+//            "muteHttpExceptions": true
+//          };
+//s
+//        var result = UrlFetchApp.fetch(url, options);
+//        Logger.log(result);
+        
+        $.ajax({
+            data: 'payload=' + JSON.stringify(data),
+            dataType: 'json',
+            processData: false,
+            type: 'POST',
+            muteHttpExceptions: true,
+            url: url
+        });
+    }
+
+</script>
+</html>

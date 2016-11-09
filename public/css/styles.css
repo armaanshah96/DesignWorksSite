@@ -124,6 +124,7 @@ p {
     padding: .2em 0;    
     position:fixed;
     z-index: 1000;
+
 }
 
 .nav li {
@@ -139,15 +140,20 @@ p {
 
 .homelogo {
     vertical-align: middle;
-    width:70%
+    width:60%
 }
 
+.nav li a {
+    text-decoration: none;
+    color:black;
+}
 /**********************************************************
 ***     Tab Styles (i.e. full portfolio, contact us)    ***
 ***********************************************************/
 
 .tab {
     color:white;
+    padding: 0 .2em;
 }
 
 #redtab {
@@ -367,7 +373,7 @@ make team pictures respond to funny images
 
 .hello_content {
     margin: 0 auto;
-    padding: 3em;
+    padding: 3em 0;
 }
 
 p.description {
@@ -421,7 +427,81 @@ p.description {
     font-family: 'title', 'sans-serif';
 }
 
+/*********************
+***  Contact Page  ***
+*********************/
+.contact-title {
+    padding-top: 6rem;
+}
 
+.contact-text {
+    padding: .3em 0 1em 0;
+}
+
+.form_text {
+/*    display:inline-block;*/
+    font-size:1.6em;
+/*    padding: .3em 0;*/
+}
+
+form div {
+    padding: .5em 0;
+}
+
+input, select, textarea {
+    outline: none;
+    background-color: rgb(56,72,79);
+    border-radius: 10px;
+    padding:.6em;
+    font-size:1em;
+    color:white;
+    font-family: 'general', sans-serif;
+
+}
+
+select {
+    height: 2.2em;
+}
+
+.note-input {
+    height:3.5em;
+    vertical-align: text-top;
+}
+
+input[type=submit] {
+    background-color: rgb(154,84,158);
+    cursor: pointer;
+}
+
+.hide {
+    visibility:hidden;
+}
+
+/*********************
+***  Footer Section  ***
+*********************/
+footer {
+    background-color: rgb(56,72,79);
+    color:white;
+    margin-top: 3em;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    
+}
+
+footer a:hover > .tealhover {color: rgb(49,165,153);}
+footer a:hover > .bluehover {color: rgb(89,161,213);}
+footer a:hover > .purplehover {color: rgb(154,84,158);}
+footer a:hover > .redhover {color: rgb(237,84,85);}
+footer a:hover > .orangehover {color: rgb(245,163,58);}
+footer a:hover > .greenhover {color: rgb(81,181,87);}
+
+.footer-text {
+    padding:3em 0;
+}
 
 /*********************
 ***  Site Colors  ***
@@ -554,6 +634,11 @@ p.description {
         font-size: 1.3em;
     }
     
+    /*************************
+    ***  Contact Page  ***
+    *************************/
+/*    fix select box to be larger at this point, fix submit button so better quality code*/
+    
 }
 
 @media screen and (max-width:720px) {
@@ -579,6 +664,17 @@ p.description {
     }
     .medium-col-13 {
         width: 81.25%;
+    }
+    
+    /*************************
+    ***  Contact Page  ***
+    *************************/
+    .medium-col-8 {
+        width: 37.5%;
+    }
+    
+    .medium-col-5 {
+        width:30%;
     }
 }   
 
@@ -629,6 +725,10 @@ p.description {
         width: 93.75%;
     }
     
+    /*************************
+    ***  Contact Page  ***
+    *************************/
+
 }
 
 @media screen and (max-width:500px) {
@@ -668,6 +768,9 @@ p.description {
     .mobile-col-16 {
         width: 100%;
     }
+    .mobile-col-10 {
+        width: 62.5%;
+    }
     
     .mobile-clear-float {
         text-align: center;
@@ -675,14 +778,14 @@ p.description {
         padding:0;
         margin:0;
     }
-}
-
-
-@media screen and (max-width:830px) {
-    .main_text {
-        font-size: 1em;
+    
+    
+    /*************************
+    ***  Contact Page  ***
+    *************************/
+    .form_text {
+        display: block;
+        text-align: center;
+        padding:0;
     }
 }
-
-@media screen and (max-width:720px) {}
-
