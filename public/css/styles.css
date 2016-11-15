@@ -140,7 +140,7 @@ p {
 
 .homelogo {
     vertical-align: middle;
-    width:60%
+    width:60%;
 }
 
 .nav li a {
@@ -456,7 +456,6 @@ input, select, textarea {
     font-size:1em;
     color:white;
     font-family: 'general', sans-serif;
-
 }
 
 select {
@@ -478,12 +477,20 @@ input[type=submit] {
 }
 
 /*********************
+***  Work Section  ***
+*********************/
+
+
+/*********************
 ***  Footer Section  ***
 *********************/
 footer {
     background-color: rgb(56,72,79);
     color:white;
     margin-top: 3em;
+/*    position:absolute;*/
+    clear:both;
+    bottom:0px;
 }
 
 footer a {
@@ -501,6 +508,19 @@ footer a:hover > .greenhover {color: rgb(81,181,87);}
 
 .footer-text {
     padding:3em 0;
+}
+
+.social {
+    margin-top:.8em;
+}
+
+.social li {
+    display: inline;
+}
+
+.icon {
+    width:3%;
+    margin:1em;
 }
 
 /*********************
@@ -726,8 +746,12 @@ footer a:hover > .greenhover {color: rgb(81,181,87);}
     }
     
     /*************************
-    ***  Contact Page  ***
+    ***  Footer Section  ***
     *************************/
+    .icon {
+        width:5%;
+        margin:1em;
+    }
 
 }
 
