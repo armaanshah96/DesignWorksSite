@@ -8,53 +8,48 @@
     <link rel="stylesheet" href="public/css/styles.css">
     <!--    <script src="public/contact-form.js"></script>-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script>
+    <style>
+            
+        </style>
 </head>
 
 <body>
+    
     <!--    Nav bar     -->
     <ul class="centered col-16 nav">
         <li class="inlined"><a href=work.html>Work</a></li>
         <li class="inlined"><a href=index.html><img class=homelogo src=public/img/logo.png></a></li>
         <li class="inlined"><a href=contact.html>Contact</a></li>
     </ul>
-    
-        <h1 class="contact-title mega purple mobile-col-16 leftalign col-8 inlined">Our Portfolio</h1>
-        <h2 class="contact-text mobile-col-16 col-8 inlined">We're pretty proud of it.</h2>
+    <section class="centered col-14">
+        <h1 class="portfolio-title mega purple leftalign col-8 inlined">Our Portfolio</h1>
+        <h2 class="portfolio-text col-8 inlined">We're pretty proud of it.</h2>
         
-        <div class="col-offset-1 col-3 inlined">
-            <img class="portfolio-item">
-            <img class="portfolio-item">
-            <img class="portfolio-item">
-            <img class="portfolio-item">
-            <img class="portfolio-item">
-            <img class="portfolio-item">
+        <div id="masonry-grid">
+            <div class="gutter-sizer"></div>
+            <div class="grid-item"><img src="public/img/portfolio/Klick.png" class=col-16></div>
+            <div class="grid-item"><img src="public/img/portfolio/peanutbutter.png" class=col-16><div>Portfolio Item</div></div>
+            <div class="grid-item"><img src="public/img/portfolio/turbin4.jpg" class=col-16></div>
+            <div class="grid-item"><img src="public/img/portfolio/norris.png" class=col-16></div>
+            <div class="grid-item"><img src="public/img/portfolio/lion.png" class=col-16></div>
+            <div class="grid-item"><img src="public/img/portfolio/extractingcreativity.jpg" class=col-16></div>
+            <div class="grid-item"><img src="public/img/portfolio/polisci.png" class=col-16></div>
+            <div class="grid-item"><img src="public/img/portfolio/nuvc.jpg" class=col-16></div>
+            <div class="grid-item"><img src="public/img/portfolio/bigsean.png" class=col-16></div>
+            <div class="grid-item"><img src="public/img/portfolio/turbin3.jpg" class=col-16></div>
+            <div class="grid-item"><img src="public/img/portfolio/SkiTrip.png" class=col-16></div>
+            <div class="grid-item"><img src="public/img/portfolio/passionpit.jpg" class=col-16></div>
+            <div class="grid-item"><img src="public/img/portfolio/phantom.png" class=col-16></div>
+            <div class="grid-item"><img src="public/img/portfolio/font.jpg" class=col-16></div>
+            <div class="grid-item"><img src="public/img/portfolio/icons.png" class=col-16></div>
+            <div class="grid-item"><img src="public/img/portfolio/DALC.jpg" class=col-16></div>
+            <div class="grid-item"><img src="public/img/portfolio/counterpoint.jpg" class=col-16></div>
+            <div class="grid-item"><img src="public/img/portfolio/chinanight.jpg" class=col-16></div>
+            <div class="grid-item"><img src="public/img/portfolio/aibootcamp.jpg" class=col-16></div>
+            <div class="grid-item"><img src="public/img/portfolio/americanpath.jpg" class=col-16></div>
+            <div class="grid-item"><img src="public/img/portfolio/vas2.jpeg" class=col-16></div>
         </div>
-        <div class="portfolio-sizer">
-            <img class="portfolio-item">
-            <img class="portfolio-item">
-            <img class="portfolio-item">
-            <img class="portfolio-item">
-            <img class="portfolio-item">
-            <img class="portfolio-item">
-        </div>
-        <div class="portfolio-sizer">
-            <img class="portfolio-item">
-            <img class="portfolio-item">
-            <img class="portfolio-item">
-            <img class="portfolio-item">
-            <img class="portfolio-item">
-            <img class="portfolio-item">
-        </div>
-        <div class="portfolio-sizer">
-            <img class="portfolio-item">
-            <img class="portfolio-item">
-            <img class="portfolio-item">
-            <img class="portfolio-item">
-            <img class="portfolio-item">
-            <img class="portfolio-item">
-        </div>
-        
+    </section>    
     <footer>
         <div class="footer-text aligned col-16">
             <h4 class="">That's all, folks!</h4>
@@ -68,16 +63,21 @@
             </ul>
         </div> 
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-</body>
+    <script src="masonry.pkgd.min.js"></script>
 
-<script>
-    $('.grid').masonry({
-      // options...
-      itemSelector: '.portfolio-item',
-      columnWidth: '.portfolio-sizer'
-    });    
-    
-</script>
-    
+    <script>
+            // jQuery
+            var $container = jQuery('#masonry-grid');
+            // initialize
+            $container.masonry({
+              columnWidth: '.grid-item',
+              itemSelector: '.grid-item',
+              gutter: '.gutter-sizer',
+              percentPosition: true
+            });
+
+    </script> 
+</body>  
 </html>

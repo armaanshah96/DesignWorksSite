@@ -1,0 +1,118 @@
+<!--<html>
+  <head>
+    <title>Masonry Layout with Masonry Plugin</title>
+    <style>
+      * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      .item {
+        width:  50px;
+        height: 50px;
+/*        float: left;*/
+        background: #2296DD;
+        border: 2px solid #333;
+      }
+
+      .item.thumbnail {
+        width:  100px;
+        height: 100px;
+        background: #cfcfcf
+      }
+
+      .item.medium {
+        width:  150px;
+        height: 50px;
+        background: #A6E392
+      }
+
+      .item.large {
+        width:  200px;
+        height: 100px;
+        background: #D092E3
+      }
+    </style>
+  </head>
+  <body>
+    <div id='masonry'>
+      <div class="item"></div>
+      <div class="item" style="display:block;"></div>
+      <div class="item thumbnail"></div>
+      <div class="item medium"></div>
+      <div class="item"></div>
+      <div class="item large"></div>
+      <div class="item"></div>
+      <div class="item medium"></div>
+    </div>
+
+    <script src="masonry.pkgd.min.js"></script>  
+    <script>
+  var container = document.querySelector('#masonry');
+  var masonry = new Masonry(container, {
+    columnWidth: 50,
+    itemSelector: '.item'
+  });
+      </script>
+
+    </body>
+</html> -->
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src=masonry.pkgd.min.js></script>
+    
+        <style>
+            #masonry-grid {width:100%;}
+            #masonry-grid .grid-item {
+/*                padding:2em;*/
+/*                height:2em;*/
+/*                background-color:orange;*/
+/*                position:relative;*/
+                /*                float:left;*/
+            }
+            .grid-item {
+                width:21%;
+            }
+            
+            #masonry-grid .h2 {
+/*                height:3em;*/
+/*                background-color: beige;*/
+            }
+            .gutter-sizer {
+                width:1%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="masonry-grid">
+            <div class="gutter-sizer"></div>
+            <div class="grid-item"><img src="public/img/portfolio/counterpoint.jpg" style="width:100%;"></div>
+            <div class="grid-item h2"><img src="public/img/portfolio/house.jpg" style="width:100%;"></div>
+            <div class="grid-item"><img src="public/img/portfolio/aibootcamp.jpg" style="width:100%;"></div>
+            <div class="grid-item h2 "><img src="public/img/portfolio/chinanight.jpg" style="width:100%;"></div>
+            <div class="grid-item"><img src="public/img/portfolio/passionpit.jpg" style="width:100%;"></div>
+            <div class="grid-item"><img src="public/img/portfolio/phantom.png" style="width:100%;"></div>
+            <div class="grid-item h2 "><img src="public/img/portfolio/screen_shot_2015-01-17_at_9.16.45_pm.png" style="width:100%;"></div>
+            <div class="grid-item h2"><img src="public/img/portfolio/house.jpg" style="width:100%;"></div>
+            <div class="grid-item"><img src="public/img/portfolio/house.jpg" style="width:100%;"></div>
+            <div class="grid-item"><img src="public/img/portfolio/house.jpg" style="width:100%;"></div>
+            <div class="grid-item h2 "><img src="public/img/portfolio/house.jpg" style="width:100%;"></div>
+<div class="grid-item"><img src="public/img/portfolio/house.jpg" style="width:100%;"></div>
+        </div>
+        <script>
+            // jQuery
+            var $container = jQuery('#masonry-grid');
+            // initialize
+            $container.masonry({
+              columnWidth: '.grid-item',
+              itemSelector: '.grid-item',
+              gutter: '.gutter-sizer',
+              percentPosition: true
+            });
+
+        </script>
+    </body>
+</html>
+
