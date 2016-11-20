@@ -8,9 +8,8 @@
     <link rel="stylesheet" href="public/css/styles.css">
     <!--    <script src="public/contact-form.js"></script>-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <style>
-            
-        </style>
+    <script src="masonry.pkgd.min.js"></script>
+
 </head>
 
 <body>
@@ -27,27 +26,154 @@
         
         <div id="masonry-grid">
             <div class="gutter-sizer"></div>
-            <div class="grid-item"><img src="public/img/portfolio/Klick.png" class=col-16></div>
-            <div class="grid-item"><img src="public/img/portfolio/peanutbutter.png" class=col-16><div>Portfolio Item</div></div>
-            <div class="grid-item"><img src="public/img/portfolio/turbin4.jpg" class=col-16></div>
-            <div class="grid-item"><img src="public/img/portfolio/norris.png" class=col-16></div>
-            <div class="grid-item"><img src="public/img/portfolio/lion.png" class=col-16></div>
-            <div class="grid-item"><img src="public/img/portfolio/extractingcreativity.jpg" class=col-16></div>
-            <div class="grid-item"><img src="public/img/portfolio/polisci.png" class=col-16></div>
-            <div class="grid-item"><img src="public/img/portfolio/nuvc.jpg" class=col-16></div>
-            <div class="grid-item"><img src="public/img/portfolio/bigsean.png" class=col-16></div>
-            <div class="grid-item"><img src="public/img/portfolio/turbin3.jpg" class=col-16></div>
-            <div class="grid-item"><img src="public/img/portfolio/SkiTrip.png" class=col-16></div>
-            <div class="grid-item"><img src="public/img/portfolio/passionpit.jpg" class=col-16></div>
-            <div class="grid-item"><img src="public/img/portfolio/phantom.png" class=col-16></div>
-            <div class="grid-item"><img src="public/img/portfolio/font.jpg" class=col-16></div>
-            <div class="grid-item"><img src="public/img/portfolio/icons.png" class=col-16></div>
-            <div class="grid-item"><img src="public/img/portfolio/DALC.jpg" class=col-16></div>
-            <div class="grid-item"><img src="public/img/portfolio/counterpoint.jpg" class=col-16></div>
-            <div class="grid-item"><img src="public/img/portfolio/chinanight.jpg" class=col-16></div>
-            <div class="grid-item"><img src="public/img/portfolio/aibootcamp.jpg" class=col-16></div>
-            <div class="grid-item"><img src="public/img/portfolio/americanpath.jpg" class=col-16></div>
-            <div class="grid-item"><img src="public/img/portfolio/vas2.jpeg" class=col-16></div>
+            <div class="grid-size grid-item">
+                <img src="public/img/portfolio/Klick.png" class=col-16>
+                <div class="inlined img-description col-16">
+                    <img class="service-logo col-offset-1 inlined col-3" src="public/img/service-icons/computer_1024x1024.png">
+                    <p class="col-offset-1 inlined col-10">Website for Klick Together</p>
+                </div>
+            </div>
+            <div class="grid-size grid-item">
+                <img src="public/img/portfolio/peanutbutter.png" class=col-16>
+                <div class="inlined img-description col-16">
+                    <img class="service-logo col-offset-1 inlined col-3" src="public/img/service-icons/business_1024x1024.png">
+                    <p class="col-offset-1 inlined col-10">Branding for Peanut Butter</p>
+                </div>
+            </div>
+            
+            <div class="grid-size grid-item">
+                <img src="public/img/portfolio/turbin4.jpg" class=col-16>
+                <div class="inlined img-description col-16">
+                    <img class="service-logo col-offset-1 inlined col-3" src="public/img/service-icons/files_1024x1024.png">
+                    <p class="col-offset-1 inlined col-10">Print Design for The Week</p>
+                </div>
+            </div>
+            <div class="grid-size grid-item">
+                <img src="public/img/portfolio/norris.png" class=col-16>
+                <div class="inlined img-description col-16">
+                    <img class="service-logo col-offset-1 inlined col-3" src="public/img/service-icons/business_1024x1024.png">
+                    <p class="col-offset-1 inlined col-10">Branding for Norris at Night</p>
+                </div>
+            </div>
+            <div class="grid-size grid-item">
+                <img src="public/img/portfolio/lion.png" class=col-16>
+                <div class="inlined img-description col-16">
+                    <img class="service-logo col-offset-1 inlined col-3" src="public/img/service-icons/files_1024x1024.png">
+                    <p class="col-offset-1 inlined col-10">Branding for Lion</p>
+                </div>
+            </div>
+            <div class="grid-size grid-item">
+                <img src="public/img/portfolio/extractingcreativity.jpg" class=col-16>
+                <div class="inlined img-description col-16">
+                    <img class="service-logo col-offset-1 inlined col-3" src="public/img/service-icons/files_1024x1024.png">
+                    <p class="col-offset-1 inlined col-10">Print Design for Mark Fisher</p>
+                </div>
+            </div>
+            <div class="grid-size grid-item">
+                <img src="public/img/portfolio/polisci.png" class=col-16>
+                <div class="inlined img-description col-16">
+                    <img class="service-logo col-offset-1 inlined col-3" src="public/img/service-icons/business_1024x1024.png">
+                    <p class="col-offset-1 inlined col-10">Logo Design for Northwestern Political Science</p>
+                </div>
+            </div>
+            <div class="grid-size grid-item">
+                <img src="public/img/portfolio/nuvc.jpg" class=col-16>
+                <div class="inlined img-description col-16">
+                    <img class="service-logo col-offset-1 inlined col-3" src="public/img/service-icons/files_1024x1024.png">
+                    <p class="col-offset-1 inlined col-10">Print Design for Northwestern Venture Competition</p>
+                </div>
+            </div>
+            <div class="grid-size grid-item">
+                <img src="public/img/portfolio/bigsean.png" class=col-16>
+                <div class="inlined img-description col-16">
+                    <img class="service-logo col-offset-1 inlined col-3" src="public/img/service-icons/files_1024x1024.png">
+                    <p class="col-offset-1 inlined col-10">Print Design for A&amp;O Blowout</p>
+                </div>
+            </div>
+            <div class="grid-size grid-item">
+                <img src="public/img/portfolio/turbin3.jpg" class=col-16>
+                <div class="inlined img-description col-16">
+                    <img class="service-logo col-offset-1 inlined col-3" src="public/img/service-icons/files_1024x1024.png">
+                    <p class="col-offset-1 inlined col-10">Print Design for Norris Anniversary</p>
+                </div>
+            </div>
+            <div class="grid-size grid-item">
+                <img src="public/img/portfolio/SkiTrip.png" class=col-16>
+                <div class="inlined img-description col-16">
+                    <img class="service-logo col-offset-1 inlined col-3" src="public/img/service-icons/clothes_1024x1024.png">
+                    <p class="col-offset-1 inlined col-10">Apparel Design for Ski Trip</p>
+                </div>
+            </div>
+            <div class="grid-size grid-item">
+                <img src="public/img/portfolio/passionpit.jpg" class=col-16>
+                <div class="inlined img-description col-16">
+                    <img class="service-logo col-offset-1 inlined col-3" src="public/img/service-icons/files_1024x1024.png">
+                    <p class="col-offset-1 inlined col-10">Print Design for A&amp;O Ball</p>
+                </div>
+            </div>
+            <div class="grid-size grid-item">
+                <img src="public/img/portfolio/phantom.png" class=col-16>
+                <div class="inlined img-description col-16">
+                    <img class="service-logo col-offset-1 inlined col-3" src="public/img/service-icons/clothes_1024x1024.png">
+                    <p class="col-offset-1 inlined col-10">Apparel Design for Phantom Carriage</p>
+                </div>
+            </div>
+            <div class="grid-size grid-item">
+                <img src="public/img/portfolio/font.jpg" class=col-16>
+                <div class="inlined img-description col-16">
+                    <img class="service-logo col-offset-1 inlined col-3" src="public/img/service-icons/files_1024x1024.png">
+                    <p class="col-offset-1 inlined col-10">Print Design for Font Workshop</p>
+                </div>
+            </div>
+            <div class="grid-size grid-item">
+                <img src="public/img/portfolio/icons.png" class=col-16>
+                <div class="inlined img-description col-16">
+                    <img class="service-logo col-offset-1 inlined col-3" src="public/img/service-icons/computer_1024x1024.png">
+                    <p class="col-offset-1 inlined col-10">Logo Design for Peanut Butter</p>
+                </div>
+            </div>
+            <div class="grid-size grid-item">
+                <img src="public/img/portfolio/DALC.jpg" class=col-16>
+                <div class="inlined img-description col-16">
+                    <img class="service-logo col-offset-1 inlined col-3" src="public/img/service-icons/files_1024x1024.png">
+                    <p class="col-offset-1 inlined col-10">Print Design for Department of Asian Languages</p>
+                </div>
+            </div>
+            <div class="grid-size grid-item">
+                <img src="public/img/portfolio/counterpoint.jpg" class=col-16>
+                <div class="inlined img-description col-16">
+                    <img class="service-logo col-offset-1 inlined col-3" src="public/img/service-icons/files_1024x1024.png">
+                    <p class="col-offset-1 inlined col-10">Print Design for CountersPoint Music Festival</p>
+                </div>
+            </div>
+            <div class="grid-size grid-item">
+                <img src="public/img/portfolio/chinanight.jpg" class=col-16>
+                <div class="inlined img-description col-16">
+                    <img class="service-logo col-offset-1 inlined col-3" src="public/img/service-icons/files_1024x1024.png">
+                    <p class="col-offset-1 inlined col-10">Print Design for China Night</p>
+                </div>
+            </div>
+            <div class="grid-size grid-item">
+                <img src="public/img/portfolio/aibootcamp.jpg" class=col-16>
+                <div class="inlined img-description col-16">
+                    <img class="service-logo col-offset-1 inlined col-3" src="public/img/service-icons/files_1024x1024.png">
+                    <p class="col-offset-1 inlined col-10">Print Design for Illustrator Workshop</p>
+                </div>
+            </div>
+            <div class="grid-size grid-item">
+                <img src="public/img/portfolio/americanpath.jpg" class=col-16>
+                <div class="inlined img-description col-16">
+                    <img class="service-logo col-offset-1 inlined col-3" src="public/img/service-icons/files_1024x1024.png">
+                    <p class="col-offset-1 inlined col-10">Print Design for American Path</p>
+                </div>
+            </div>
+            <div class="grid-size grid-item">
+                <img src="public/img/portfolio/vas2.jpeg" class=col-16>
+                <div class="inlined img-description col-16">
+                    <img class="service-logo col-offset-1 inlined col-3" src="public/img/service-icons/files_1024x1024.png">
+                    <p class="col-offset-1 inlined col-10">Print Design for Undergraduate Research &amp; Arts</p>
+                </div>
+            </div>
         </div>
     </section>    
     <footer>
@@ -63,20 +189,20 @@
             </ul>
         </div> 
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-    <script src="masonry.pkgd.min.js"></script>
-
     <script>
             // jQuery
-            var $container = jQuery('#masonry-grid');
+        
+        var $container = jQuery('#masonry-grid');
+//        var $item = jQuery('.grid-item > img');
             // initialize
+//        $container.imagesLoaded(function() {
             $container.masonry({
-              columnWidth: '.grid-item',
-              itemSelector: '.grid-item',
+              columnWidth: '.grid-size',
+              itemSelector: '.grid-size',
               gutter: '.gutter-sizer',
               percentPosition: true
             });
+//        });
 
     </script> 
 </body>  

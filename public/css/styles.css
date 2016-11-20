@@ -483,26 +483,42 @@ input[type=submit] {
 #masonry-grid .grid-item {
     margin: .5em 0;
 }
-.grid-item {
-    width:23%;
+
+.gutter-sizer {width:2%;}
+
+.grid-size { width: 23%;}
+
+.grid-item > img {
+    width:100%;
+/*    border: 1px solid rgb(221, 221, 221);*/
 }
 
-.gutter-sizer {
-    width:2%;
+.img-description {
+    background-color: rgb(245,163,58);
+    position:absolute;
+    bottom: 0;
+    vertical-align: middle;
+    visibility: hidden;
+    opacity: 0;
+    padding: .5em 0 ;
+/*
+    -webkit-transition: visibility opacity 1s;
+    transition: visibility opacity 1s;
+*/
 }
 
-.grid-item img {
-    border: 1px solid rgb(221, 221, 221);
+.service-logo {
+    vertical-align: middle;
 }
 
-.grid-item div {
-    display:none;
+.img-description p {
+    vertical-align: middle;
+    font-size:1em;
 }
-.grid-item div:hover {
-    bottom:0px;
-    padding-top:2em;
-    background-color: white;
-    z-index: 1000;
+
+.grid-item:hover .img-description {
+    visibility: visible;
+    opacity: 1;
 }
 
 /*********************
@@ -670,10 +686,10 @@ footer a:hover > .greenhover {color: rgb(81,181,87);}
         width: 81.25%;
     }
     
-    .grid-item {
+    .grid-size {
         width:30%
     }
-    .grid-item img {
+    .grid-item > img {
         width:100%;
     }
     .gutter-sizer { width:3%; }
@@ -793,14 +809,17 @@ footer a:hover > .greenhover {color: rgb(81,181,87);}
         width: 100%;
     }
     
-    .grid-item {
+    .grid-size {
         width:47%;
     }
-    .grid-item img {
+    .grid-item > img {
         width:100%;
     }
     .gutter-sizer { width:3%; }
     
+    .img-description p {
+        font-size: .9em;
+    }
     /*************************
     ***  Footer Section  ***
     *************************/
