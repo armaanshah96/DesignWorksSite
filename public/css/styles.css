@@ -162,11 +162,18 @@ p {
     text-align: center;
 }
 
-#yellowtab {
+#orangetab {
     background-color: rgb(250,178,49);
     text-decoration: none;
     padding: .1em 4.5em .1em .1em;
     margin-bottom: -1.4rem;
+}
+
+#bluetab {
+    background-color: rgb(89,161,213);
+    text-decoration: none;
+    padding: .1em 4.5em .1em .1em;
+    margin-top: 1.6em;
 }
 
 /****************************
@@ -384,18 +391,11 @@ p.description {
 }
 
 /****************************
-***  How it Works Section ***
+***  Process Section ***
 ****************************/
-
-#howitworks {
-    width:100%;
-    clear:both;
-    padding: 0em 0 2em 0;
-    background-color: rgb(207,216,220);
-}
-
-.process {
-    width:100%;
+.process_text {
+    padding: 1em 0em 1em 1em;
+    font-family: 'general', 'sans-serif';
 }
 
 .process_num {
@@ -404,10 +404,39 @@ p.description {
     font-family: 'general', 'sans-serif';
 }
 
-.process_text {
+.process-description {
     padding: 1em 0em 1em 1em;
     font-family: 'general', 'sans-serif';
 }
+
+/****************************
+***  How it Works Section ***
+****************************/
+
+#service {
+    width:100%;
+    clear:both;
+    padding: 0em 0 3em 0;
+    background-color: rgb(207,216,220);
+    margin-bottom: 2em;
+}
+
+.service-main-text {
+    padding: 1em 0 .5em 0; 
+}
+
+.service-logo {
+    width: 5em;
+    padding: 1em;
+}
+
+.service-description {
+    padding: 1em 0em 1em 1em;
+    font-family: 'general', 'sans-serif';
+}
+
+/*.imgWrap {} not used until responsive design*/
+
 
 /*********************
 ***  Team Section  ***
@@ -430,11 +459,11 @@ p.description {
 /*********************
 ***  Contact Page  ***
 *********************/
-.contact-title, .portfolio-title {
+.contact-title, .portfolio-title, .process-title, .join-title {
     padding-top: 6rem;
 }
 
-.contact-text, .portfolio-text {
+.contact-text, .portfolio-text, .process-text, .join-text {
     padding: .3em 0 2em 0;
 }
 
@@ -507,7 +536,7 @@ input[type=submit] {
 */
 }
 
-.service-logo {
+.icon-middle {
     vertical-align: middle;
 }
 
@@ -521,6 +550,9 @@ input[type=submit] {
     opacity: 1;
 }
 
+.grid-item:hover {
+    border: 1px solid #e2e2e2;
+}
 /*********************
 ***  Footer Section  ***
 *********************/
@@ -531,6 +563,9 @@ footer {
 /*    position:absolute;*/
     clear:both;
     bottom:0px;
+    left:0px;
+/*    position:absolute;*/
+    
 }
 
 footer a {
@@ -669,6 +704,10 @@ footer a:hover > .greenhover {color: rgb(81,181,87);}
 }
 
 @media screen and (max-width:980px) {
+    /****************************
+    ***  Services Section     ***
+    ****************************/
+    
     /*********************
     ***  Team Section  ***
     *********************/
@@ -680,9 +719,16 @@ footer a:hover > .greenhover {color: rgb(81,181,87);}
 
 @media screen and (max-width:930px) {
     /*********************
+    ***  Service Section  ***
+    *********************/
+    #service >div {
+        width:87.5%;
+    }
+    
+    /*********************
     ***  Work Section  ***
     *********************/
-    .portfolio-title, .portfolio-text {
+    .portfolio-title, .portfolio-text, .process-title, .process-text,join-title, join-text {
         width: 81.25%;
     }
     
@@ -712,20 +758,12 @@ footer a:hover > .greenhover {color: rgb(81,181,87);}
     }
     
     /*************************
-    ***  Contact Page  ***
+    ***  Services Page  ***
     *************************/
-/*    fix select box to be larger at this point, fix submit button so better quality code*/
     
 }
 
 @media screen and (max-width:720px) {
-    /***************************
-    ***  Slideshow Section  ***
-    ***************************/
-    .main_text h2 {
-        font-size: 1em;
-    }
-    
     /***************************
     ***  Slideshow Section  ***
     ***************************/
@@ -753,7 +791,16 @@ footer a:hover > .greenhover {color: rgb(81,181,87);}
     .medium-col-5 {
         width:30%;
     }
-}   
+}  
+
+@media screen and (max-width:650px) {
+    /*************************
+    ***  Process Section  ***
+    *************************/
+    #service div {
+        width: 93.75%;
+    }
+}
 
 @media screen and (max-width:600px) {
     /***************************
@@ -787,7 +834,30 @@ footer a:hover > .greenhover {color: rgb(81,181,87);}
         z-index: 0;
     /*    vertical-align: text-top;*/
     }
-
+    
+    /*************************
+    ***  Process Section  ***
+    *************************/
+    #service div {
+        width: 100%%;
+    }
+    
+    .service-description {
+        text-align: center;
+        width: 100%;
+        padding:0 0 1em 0;
+        margin:0;
+    }
+    
+    .service-logo {
+        float:none;
+        clear: none;
+    }
+    .imgWrap {
+        text-align: center;
+    }
+    
+    
     /*********************
     ***  Team Section  ***
     *********************/
@@ -805,7 +875,7 @@ footer a:hover > .greenhover {color: rgb(81,181,87);}
     /*************************
     ***  Work Section  ***
     *************************/
-    .portfolio-title, .portfolio-text {
+    .portfolio-title, .portfolio-text, .process-title, .process-text, join-title, join-text {
         width: 100%;
     }
     
@@ -862,7 +932,7 @@ footer a:hover > .greenhover {color: rgb(81,181,87);}
     }
     
     /*************************
-    ***  Process Section  ***
+    ***  Service and Process Section  ***
     *************************/
     .mobile-col-16 {
         width: 100%;
@@ -878,7 +948,12 @@ footer a:hover > .greenhover {color: rgb(81,181,87);}
         margin:0;
     }
     
-    
+    .service-logo {
+        float:none;
+    }
+    .imgWrap {
+        text-align: center;
+    }
     /*************************
     ***  Contact Page  ***
     *************************/
@@ -888,13 +963,13 @@ footer a:hover > .greenhover {color: rgb(81,181,87);}
         padding:0;
     }
     
-    /*************************
-    ***  Work Section  ***
-    *************************/
-    .portfolio-title {
+    /**********************************
+    ***  Work and Process Sections  ***
+    **********************************/
+    .portfolio-title, process-title, {
         font-size: 3em;
     }
-    .portfolio-text {
+    .portfolio-text, .process-text, .join-text {
         font-size: 2em;
     }
 }
