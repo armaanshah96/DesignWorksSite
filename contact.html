@@ -23,6 +23,7 @@
         <h1 class="contact-title mega teal leftalign">Drop a line.</h1>
         <h2 class="contact-text">Tell us what you're looking for and we'll be in touch.</h2>
 
+        <h4 class="contact-text">Fill out a <a href="https://docs.google.com/a/unorthwestern.edu/forms/d/1203JrX-QCvGeP3GqKYY1DIUAUIogIas7QTn51A9iCD8/viewform?c=0&w=1" class=orange>specifications</a> form</h4>
         <!--    form        -->
         <div class="col-16">
           <form action="ThankYou.html">
@@ -39,7 +40,9 @@
               
             <div id=product>
                 <h4 class="col-3 medium-col-5 inlined form_text">Product</h4>
+                <input class=" col-6 mobile-col-10" type=text id=productinput name=product placeholder=" Inquiry, Flyer, Website, Apparel, Branding, Other">
 
+<!--
                 <select class=" col-4 medium-col-8 mobile-col-10" id="productinput" name="product">
                   <option value="flyer">Flyer/Poster</option>
                   <option value="website">Website</option>
@@ -49,6 +52,7 @@
                   <option value="social">Other</option>
 
                 </select>
+-->
             </div>
             <div id=notes>
                 <h4 class="col-3 medium-col-5 inlined form_text">Note</h4>
@@ -56,7 +60,7 @@
             </div>
             <div class="col-16">
             <h4 class="col-3 hide medium-col-5 inlined form_text"></h4>
-                <input class="col-3 mobile-col-10" type="submit" value="Submit" onclick="postToSheet();createMessage();">
+                <input class="col-3 mobile-col-10" type="submit" value="Submit" onclick="postToSheet();createMessage();sendEmail();">
             </div>
           </form>
         </div>
@@ -157,6 +161,13 @@
             muteHttpExceptions: true,
             url: url
         });
+    }
+    
+    function sendEmail() {
+        var name = $('#nameinput').val();
+        var email = $('#emailinput').val();
+        var product = $('#productinput').val();
+        var note = $('#noteinput').val();
     }
 
 </script>
