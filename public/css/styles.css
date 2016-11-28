@@ -7,12 +7,12 @@
 
 @font-face {
     font-family: "general";
-    src: url("../../fonts/CircularStd-Medium.otf") format("truetype");
+    src: url("../fonts/CircularStd-Medium.otf") format("truetype");
 }
 
 @font-face {
     font-family: "title";
-    src: url("../../fonts/CircularStd-Bold.otf") format("truetype");
+    src: url("../fonts/CircularStd-Bold.otf") format("truetype");
 }
 
 html {
