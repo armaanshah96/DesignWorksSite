@@ -32,7 +32,7 @@ html {
 --    SLIDESHOW (HOMEPAGE LANDING COVER PHOTOS) SECTION (HOMEPAGE)
 --    WE ARE DESIGNWORKS SECTION (HOMEPAGE)
 --    PROCESS PAGE (PROCESS PAGE)
---    HOW IT WORKS SECTION (HOMEPAGE)
+--    SERVICES SECTION (HOMEPAGE)
 --    TEAM SECTION (HOMEPAGE)
 --    CONTACT PAGE (CONTACT PAGE)
 --    WORK PAGE (WORK PAGE)
@@ -445,7 +445,7 @@ p.description {
 }
 
 /****************************
-***  How it Works Section ***
+***  Services Section ***
 ****************************/
 
 #service {
@@ -458,6 +458,10 @@ p.description {
 
 .service-main-text {
     padding: 1em 0 .5em 0; 
+}
+
+#service li {
+    vertical-align: middle;
 }
 
 .service-logo {
@@ -490,7 +494,6 @@ p.description {
     font-size:1.8em;
     font-family: 'title', 'sans-serif';
 }
-
 /*********************
 ***  Contact Page  ***
 *********************/
@@ -757,7 +760,7 @@ footer a:hover > .greenhover {color: rgb(81,181,87);}
     ***  Service Section  ***
     *********************/
     #service >div {
-        width:87.5%;
+        width:81.25%;
     }
     
     /*********************
