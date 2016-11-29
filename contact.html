@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Designworks</title>
+    <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="public/img/favicon.png" type="image/x-icon"/>
     <link rel="stylesheet" href="public/css/styles.css">
@@ -24,7 +25,7 @@
         <h1 class="contact-title mega teal leftalign">Drop a line.</h1>
         <h2 class="contact-text">Tell us what you're looking for and we'll be in touch.</h2>
 
-        <h4 class="contact-text">Know what you need? Fill out a <a target="_blank" href="https://docs.google.com/a/unorthwestern.edu/forms/d/1203JrX-QCvGeP3GqKYY1DIUAUIogIas7QTn51A9iCD8/viewform?c=0&w=1" class=orange>specifications</a> form.</h4>
+        <h4 class="contact-text">Know what you need? Fill out our <a target="_blank" href="https://docs.google.com/a/unorthwestern.edu/forms/d/1203JrX-QCvGeP3GqKYY1DIUAUIogIas7QTn51A9iCD8/viewform?c=0&w=1" class=orange>specifications</a> form.</h4>
 <!--        <h4 class=contact-text>Or fill out a general inquiry below.</h4>-->
         <!--    form        -->
         <div class="col-16">
@@ -110,67 +111,5 @@
             }
         });
     }
-    
-    function createMessage() {
-        Logger.log("Creating message");
-        var url = "https://docs.google.com/spreadsheets/d/1VV4VCyZdDud9ozEtZGO6piwAcRdJcvqyhzC-ZP5QYV8/edit#gid=614233283";
-
-        var name = $('#nameinput').val();
-        var email = $('#emailinput').val();
-        var product = $('#productinput').val();
-        var note = $('#noteinput').val();
-
-        if(product==="Inquiry") {
-            var message = Name + " has a inquiry. <https://docs.google.com/spreadsheets/d/1VV4VCyZdDud9ozEtZGO6piwAcRdJcvqyhzC-ZP5QYV8/edit#gid=614233283|Check it Out>";
-        }
-        else if (product==="Other") {
-            var message = "Specs filled out by " + name + " for " + product + ". <https://docs.google.com/spreadsheets/d/1VV4VCyZdDud9ozEtZGO6piwAcRdJcvqyhzC-ZP5QYV8/edit#gid=614233283|Check it Out>";
-        }
-        else {
-           var message = "Specs filled out by " + name + " for a " + product + ". <https://docs.google.com/spreadsheets/d/1VV4VCyZdDud9ozEtZGO6piwAcRdJcvqyhzC-ZP5QYV8/edit#gid=614233283|Check it Out>";
-        }
-
-        var payload = 
-          {
-            "username": "DwContactBot",
-            "icon_emoji": ":o",
-            "text" : message
-          };
-        messageSlack(payload);
-    }
-
-    function messageSlack(data) {
-        var url = "https://hooks.slack.com/services/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";
-
-        var payload = JSON.stringify(data);
-//
-//        var options =
-//          {
-//            "method"  : "POST",
-//            "contentType" : "application/json",
-//            "payload" : payload,
-//            "muteHttpExceptions": true
-//          };
-//s
-//        var result = UrlFetchApp.fetch(url, options);
-//        Logger.log(result);
-        
-        $.ajax({
-            data: 'payload=' + JSON.stringify(data),
-            dataType: 'json',
-            processData: false,
-            type: 'POST',
-            muteHttpExceptions: true,
-            url: url
-        });
-    }
-    
-    function sendEmail() {
-        var name = $('#nameinput').val();
-        var email = $('#emailinput').val();
-        var product = $('#productinput').val();
-        var note = $('#noteinput').val();
-    }
-
 </script>
 </html>
