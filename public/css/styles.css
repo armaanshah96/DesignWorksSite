@@ -557,21 +557,16 @@ input[type=submit] {
 
 .grid-item > img {
     width:100%;
-/*    border: 1px solid rgb(221, 221, 221);*/
 }
 
 .img-description {
     background-color: rgb(245,163,58);
     position:absolute;
     bottom: 0;
-    vertical-align: middle;
     visibility: hidden;
     opacity: 0;
     padding: .5em 0 ;
-/*
-    -webkit-transition: visibility opacity 1s;
-    transition: visibility opacity 1s;
-*/
+
 }
 
 .icon-middle {

@@ -4,10 +4,10 @@
     <title>Designworks</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="public/img/favicon.png" type="image/x-icon"/>
-    <link rel="stylesheet" href="public/css/styles.css">
-    <!--    <script src="public/contact-form.js"></script>-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="icon" href="../public/img/favicon.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="../public/css/styles.css">
+    <!--    <script src="../public/js/contact-form.js"></script>-->
+    <script src="../public/js/modules/jquery.min.js"></script>
 </head>
 
 <body>
@@ -17,7 +17,7 @@
     <ul class="centered col-16 nav">
         <li class="inlined"><a href=work.html>Work</a></li>
 <!--            <li class="inlined "><a href=process.html>Process</a></li>-->
-        <li class="inlined "><a href=index.html><img class=homelogo src=public/img/logo.png></a></li>
+        <li class="inlined "><a href=index.html><img class=homelogo src=../public/img/logo.png></a></li>
         <li class="inlined"><a href=contact.html>Contact</a></li>
 <!--            <li class="inlined"><a href=join.html>Join</a></li>-->
     </ul>
@@ -36,7 +36,6 @@
             </div>
             
             <div id=email>
-<!--                <div class="inlined"><label class="form_text" for="fname">Email</label></div>-->
                 <h4 class="col-3 medium-col-5 inlined form_text">Email</h4>
                 <input class=" col-6 mobile-col-10" type="text" id="emailinput" name="email">
             </div>
@@ -44,18 +43,6 @@
             <div id=product>
                 <h4 class="col-3 medium-col-5 inlined form_text">Product</h4>
                 <input class=" col-6 mobile-col-10" type=text id=productinput name=product placeholder=" Inquiry, Flyer, Website, Apparel, Branding, Other">
-
-<!--
-                <select class=" col-4 medium-col-8 mobile-col-10" id="productinput" name="product">
-                  <option value="flyer">Flyer/Poster</option>
-                  <option value="website">Website</option>
-                  <option value="apparel">Apparel</option>
-                  <option value="logo">Logo/Branding</option>
-                  <option value="social">Social Media</option>
-                  <option value="social">Other</option>
-
-                </select>
--->
             </div>
             <div id=notes>
                 <h4 class="col-3 medium-col-5 inlined form_text">Note</h4>
@@ -63,7 +50,7 @@
             </div>
             <div class="col-16">
             <h4 class="col-3 hide medium-col-5 inlined form_text"></h4>
-                <input class="col-3 mobile-col-10" type="submit" value="Submit" onclick="postToSheet();createMessage();sendEmail();">
+                <input class="col-3 mobile-col-10" type="submit" value="Submit" onclick="postToSheet();">
             </div>
           </form>
         </div>
@@ -74,11 +61,11 @@
 <!--            <h5><a class="" href="mailto:hello@designworks.nu"><span>hello</span>@<span class="redhover">D</span><span class=orangehover>e</span><span class=tealhover>s</span><span class=bluehover>i</span><span class="purplehover">g</span><span class="redhover">n</span><span class=orangehover>W</span><span class=tealhover>o</span><span class=bluehover>r</span><span class="purplehover">k</span><span class="redhover">s</span>.nu</a></h5>-->
             <h5><a class="" href=join.html><span class=redhover>J</span><span class=orangehover>o</span><span class=tealhover>i</span><span class="bluehover">n</span> <span class="purplehover">U</span><span class=greenhover>s</span></a></h5>
             <ul class="social">
-                <li class=inlined><a href="mailto:hello@designworks.nu"><img class=icon src="public/social-icons/envelope-icon-4.png"></a></li>
-                <li class=inlined><a target="_blank" href="https://www.instagram.com/designworksnu/"><img class=icon src="public/social-icons/instagram-4.png"></a></li>
-                <li class=inlined><a target="_blank" href="www.facebook.com/designworks.nu
-                    "><img class=icon src="public/social-icons/facebook.png"></a></li>
-                <li class=inlined><a target="_blank" href="https://www.linkedin.com/company/9283652?trk=vsrp_companies_res_name&trkInfo=VSRPsearchId%3A4505433201479135866461%2CVSRPtargetId%3A9283652%2CVSRPcmpt%3Aprimary"><img class=icon src="public/social-icons/linkedin.png"></a></li>
+                <li class=inlined><a href="mailto:hello@designworks.nu"><img class=icon src="../public/img/social-icons/envelope-icon-4.png"></a></li>
+                <li class=inlined><a target="_blank" href="https://www.instagram.com/designworksnu/"><img class=icon src="../public/img/social-icons/instagram-4.png"></a></li>
+                <li class=inlined><a target="_blank" href="https://www.facebook.com/designworks.nu
+                    "><img class=icon src="../public/img/social-icons/facebook.png"></a></li>
+                <li class=inlined><a target="_blank" href="https://www.linkedin.com/company/9283652?trk=vsrp_companies_res_name&trkInfo=VSRPsearchId%3A4505433201479135866461%2CVSRPtargetId%3A9283652%2CVSRPcmpt%3Aprimary"><img class=icon src="../public/img/social-icons/linkedin.png"></a></li>
             </ul>
         </div> 
     </footer>
